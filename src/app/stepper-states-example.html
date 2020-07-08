@@ -1,0 +1,35 @@
+<p>
+  <strong>Responsive version of MatStepper.</strong>
+</p>
+<p>
+  All the credits to the author: <a href="https://gist.github.com/davideas/3534a5c2567d6668013426ab961990f6">https://gist.github.com/davideas/3534a5c2567d6668013426ab961990f6</a>
+</p>
+
+<responsive-stepper [orientation]="(mobile$ | async) ? 'horizontal' : 'vertical'" [linear]="false" #stepper>
+    <mat-step label="Producer" state="producer">
+        <p>Step One</p>
+        <div>
+            <button matStepperNext mat-button>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Products" state="products">
+        <p>Step Two</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Delivery" state="delivery">
+      <p>Step Three</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="End" state="end">
+      <p>Step Two</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+        </div>
+    </mat-step>
+</responsive-stepper>
